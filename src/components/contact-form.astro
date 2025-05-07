@@ -9,13 +9,8 @@
                 <form 
                     name="contact" 
                     method="POST" 
-                    data-netlify="true" 
-                    netlify-honeypot="bot-field"
                     class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900"
                 >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="bot-field" />
-                    
                     <div class="grid grid-cols-1 gap-6">
                         <div class="grid grid-cols-2 gap-4">
                             <div>
@@ -83,7 +78,7 @@
                             <textarea name="message" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" rows="4" placeholder="Quels sont vos objectifs ? Quelles fonctionnalités souhaitez-vous ?" required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn bg-teal-500 hover:bg-teal-600 border-teal-500 hover:border-teal-600 text-white rounded-md w-full py-3 px-6 mt-6 transition duration-500 ease-in-out">Réserver mon appel découverte</button>
+                    <input type="submit" class="btn bg-teal-500 hover:bg-teal-600 border-teal-500 hover:border-teal-600 text-white rounded-md w-full py-3 px-6 mt-6 transition duration-500 ease-in-out" value="Réserver mon appel découverte" />
                 </form>
             </div>
         </div>
