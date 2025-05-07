@@ -1,0 +1,218 @@
+---
+import blog1 from '../assets/images/blog/01.jpg'
+import blog2 from '../assets/images/blog/02.jpg'
+import blog3 from '../assets/images/blog/03.jpg'
+
+let activeTab = 1
+
+---
+<section
+    class="relative md:py-24 py-16 bg-slate-50 dark:bg-slate-800"
+    id="process"
+>
+
+    <div class="container relative">
+        <div class="grid grid-cols-1 pb-6 text-center">
+            <h3 class="font-semibold text-2xl leading-normal mb-4">Comment <span class="text-teal-500">ça fonctionne ?</span></h3>
+            
+            <p class="text-slate-400 max-w-xl mx-auto">Un processus simple et rapide en 4 étapes</p>
+        </div>
+
+        <div class="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
+            <div class="lg:col-span-4 md:col-span-5">
+                <div class="sticky top-20">
+                    <ul class="flex-column p-6 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 rounded-md" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                        <li role="presentation">
+                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full hover:text-teal-500 duration-500" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">
+                                <span class="block">Étape 1</span>
+                                <span class="text-lg mt-2 block">Prise de contact & brief</span>
+                                <span class="block mt-2">Vous remplissez un court formulaire pour nous expliquer votre activité et vos besoins</span>
+                            </button>
+                        </li>
+                        <li role="presentation">
+                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                                <span class="block">Étape 2</span>
+                                <span class="text-lg mt-2 block">Design & création du site</span>
+                                <span class="block mt-2">Notre équipe crée un site moderne, adapté à votre métier</span>
+                            </button>
+                        </li>
+                        <li role="presentation">
+                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                                <span class="block">Étape 3</span>
+                                <span class="text-lg mt-2 block">Révision & validation</span>
+                                <span class="block mt-2">Vous recevez une version du site à valider</span>
+                            </button>
+                        </li>
+                        <li role="presentation">
+                            <button class="px-4 py-2 text-start text-base font-medium rounded-md w-full mt-6 duration-500" id="launch-tab" data-tabs-target="#launch" type="button" role="tab" aria-controls="launch" aria-selected="false">
+                                <span class="block">Étape 4</span>
+                                <span class="text-lg mt-2 block">Mise en ligne & accompagnement</span>
+                                <span class="block mt-2">Votre site est mis en ligne avec son propre nom de domaine</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-8 md:col-span-7">
+                <div id="myTabContent" class="p-6 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-700 rounded-md">
+                    <div class="" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <img src={blog1.src} class="shadow-sm dark:shadow-gray-700 rounded-md" alt="">
+                        
+                        <div class="mt-6">
+                            <h5 class="text-lg font-medium">Prise de contact & brief</h5>
+                            <p class="text-slate-400 mt-4">Vous remplissez un court formulaire pour nous expliquer votre activité et vos besoins. Nous vous rappelons sous 24h pour valider ensemble les informations.</p>
+                            <div class="mt-4">
+                                <a href="#contact" class="text-teal-500">Commencer maintenant <i class="mdi mdi-chevron-right align-middle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <img src={blog2.src} class="shadow-sm dark:shadow-gray-700 rounded-md" alt="">
+                        
+                        <div class="mt-6">
+                            <h5 class="text-lg font-medium">Design & création du site</h5>
+                            <p class="text-slate-400 mt-4">Notre équipe crée un site moderne, adapté à votre métier, optimisé pour ordinateur et téléphone. Nous utilisons les dernières technologies pour garantir un site rapide et performant.</p>
+                            <div class="mt-4">
+                                <a href="#contact" class="text-teal-500">En savoir plus <i class="mdi mdi-chevron-right align-middle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <img src={blog3.src} class="shadow-sm dark:shadow-gray-700 rounded-md" alt="">
+                        
+                        <div class="mt-6">
+                            <h5 class="text-lg font-medium">Révision & validation</h5>
+                            <p class="text-slate-400 mt-4">Vous recevez une version du site à valider. Nous faisons les ajustements nécessaires selon vos retours pour que le résultat corresponde parfaitement à vos attentes.</p>
+                            <div class="mt-4">
+                                <a href="#contact" class="text-teal-500">Voir un exemple <i class="mdi mdi-chevron-right align-middle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden " id="launch" role="tabpanel" aria-labelledby="launch-tab">
+                        <img src={blog1.src} class="shadow-sm dark:shadow-gray-700 rounded-md" alt="">
+                        
+                        <div class="mt-6">
+                            <h5 class="text-lg font-medium">Mise en ligne & accompagnement</h5>
+                            <p class="text-slate-400 mt-4">Une fois validé, nous mettons votre site en ligne avec son propre nom de domaine. Vous êtes guidé et accompagné à chaque étape pour une prise en main en toute sérénité.</p>
+                            <div class="mt-4">
+                                <a href="#contact" class="text-teal-500">Démarrer votre projet <i class="mdi mdi-chevron-right align-middle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // @ts-nocheck
+    try {
+    const Default = {
+        defaultTabId: null,
+        activeClasses: 'text-white bg-teal-500',
+        inactiveClasses: 'hover:text-teal-500 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800',
+        onShow: () => { }
+    }
+    
+    class Tabs {
+        constructor(items = [], options = {}) {
+            this._items = items
+            this._activeTab = options ? this.getTab(options.defaultTabId) : null
+            this._options = { ...Default, ...options }
+            this._init()
+        }
+    
+        _init() {
+            if (this._items.length) {
+                // set the first tab as active if not set by explicitly
+                if (!this._activeTab) {
+                    this._setActiveTab(this._items[0])
+                }
+    
+                // force show the first default tab
+                this.show(this._activeTab.id, true)
+    
+                // show tab content based on click
+                this._items.map(tab => {
+                    tab.triggerEl.addEventListener('click', () => {
+                        this.show(tab.id)
+                    })
+                })
+            }
+        }
+    
+        getActiveTab() {
+            return this._activeTab
+        }
+    
+        _setActiveTab(tab) {
+            this._activeTab = tab
+        }
+    
+        getTab(id) {
+            return this._items.filter(t => t.id === id)[0]
+        }
+    
+        show(id, forceShow = false) {
+            const tab = this.getTab(id)
+    
+            // don't do anything if already active
+            if (tab === this._activeTab && !forceShow) {
+                return
+            }
+    
+            // hide other tabs
+            this._items.map(t => {
+                if (t !== tab) {
+                    t.triggerEl.classList.remove(...this._options.activeClasses.split(" "));
+                    t.triggerEl.classList.add(...this._options.inactiveClasses.split(" "));
+                    t.targetEl.classList.add('hidden')
+                    t.triggerEl.setAttribute('aria-selected', false)
+                }
+            })
+    
+            // show active tab
+            tab.triggerEl.classList.add(...this._options.activeClasses.split(" "));
+            tab.triggerEl.classList.remove(...this._options.inactiveClasses.split(" "));
+            tab.triggerEl.setAttribute('aria-selected', true)
+            tab.targetEl.classList.remove('hidden')
+    
+            this._setActiveTab(tab)
+    
+            // callback function
+            this._options.onShow(this, tab)
+        }
+    
+    }
+    
+    window.Tabs = Tabs;
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-tabs-toggle]').forEach(triggerEl => {
+    
+            const tabElements = []
+            let defaultTabId = null
+            triggerEl.querySelectorAll('[role="tab"]').forEach(el => {
+                const isActive = el.getAttribute('aria-selected') === 'true'
+                const tab = {
+                    id: el.getAttribute('data-tabs-target'),
+                    triggerEl: el,
+                    targetEl: document.querySelector(el.getAttribute('data-tabs-target'))
+                }
+                tabElements.push(tab)
+    
+                if (isActive) {
+                    defaultTabId = tab.id
+                }
+            })
+            new Tabs(tabElements, {
+                defaultTabId: defaultTabId
+            })
+        })
+    })
+} catch (error) {
+    
+}
+</script>

@@ -1,0 +1,89 @@
+---
+	import '../assets/css/tailwind.css'
+  import '../../node_modules/tobii/dist/css/tobii.min.css'
+import Switcher from '../components/switcher.astro'
+---
+<!DOCTYPE html>
+<html lang="fr" class="light scroll-smooth" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Site Web Professionnel Gratuit | Création de Site Web au Maroc</title>
+        <meta name="description" content="Obtenez un site web professionnel gratuitement au Maroc. Création de site vitrine moderne, responsive et optimisé SEO. Offre limitée à 10 projets par mois.">
+        <meta name="keywords" content="site web gratuit, création site web maroc, site vitrine professionnel, site web responsive, référencement naturel, nom de domaine gratuit">
+        <meta name="author" content="TEC Web Agency">
+        <meta name="website" content="https://tec.ma">
+        <meta name="email" content="contact@tec.ma">
+        <meta name="version" content="1.0.0">
+        <!-- favicon -->
+        <link href="/favicon.ico" rel="shortcut icon">
+
+        <!-- Css -->
+        <!-- Main Css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></link>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="/js/app.js" defer></script>
+        <script src="/js/plugins.init.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2432832607055349');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=VOTRE_PIXEL_ID&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- End Meta Pixel Code -->
+
+    </head>
+
+	<body class="font-libre-franklin text-base text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+		<slot />
+
+    <script>
+      import Tobii from "tobii";
+      import feather from 'feather-icons'
+  
+      document.addEventListener("DOMContentLoaded", function () {
+        new Tobii();
+      });
+
+      feather.replace();
+
+      // Facebook Conversion Tracking
+      function trackFacebookConversion(eventName) {
+        if (typeof fbq !== 'undefined') {
+          fbq('track', eventName);
+        }
+      }
+
+      // Exemple d'utilisation pour le formulaire de contact
+      document.addEventListener('submit', function(e) {
+        if (e.target.id === 'contact-form') {
+          trackFacebookConversion('Lead');
+        }
+      });
+
+    </script>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

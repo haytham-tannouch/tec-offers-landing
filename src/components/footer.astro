@@ -1,0 +1,105 @@
+---
+import logo from '../assets/images/logo-dark.png'
+import logoLight from '../assets/images/logo-light.png'
+
+const year = new Date().getFullYear()
+import {socialData} from '../data/data'
+
+interface SocialData{
+    link: string;
+    icon: string;
+}
+
+---
+<footer class="relative bg-slate-900 dark:bg-slate-800">
+    <div class="container relative">
+        <div class="grid grid-cols-1">
+            <div class="relative py-12">
+                <!-- Subscribe -->
+                <div class="relative w-full">
+                    <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                        <div class="lg:col-span-5 md:col-span-6">
+                            <div class="md:me-6">
+                                <h4 class="text-2xl leading-normal font-semibold mb-6 text-white">THE ELECT CODERS</h4>
+                                <p class="text-slate-400 max-w-xl">Votre partenaire de confiance pour la création de sites web professionnels. Nous rendons le web accessible à tous les entrepreneurs.</p>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 md:col-span-6">
+                            <div class="p-6 bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800">
+                                <div class="mt-6">
+                                    <h5 class="text-lg font-semibold mb-4">Newsletter</h5>
+                                    <p class="text-slate-400 mb-4">Restez informé de nos dernières actualités et offres spéciales.</p>
+                                    <form class="mt-4">
+                                        <div class="grid grid-cols-1">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="Votre email" required>
+                                            </div>
+                                            <button type="submit" class="btn bg-teal-500 hover:bg-teal-600 border-teal-500 hover:border-teal-600 text-white rounded-md w-full py-2 px-4 transition duration-500 ease-in-out">S'abonner</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Subscribe -->
+
+                <div class="grid md:grid-cols-12 grid-cols-1 mt-8 pt-8 border-t border-gray-800">
+                    <div class="md:col-span-3">
+                        <a href="index.html">
+                            <img src={logo.src} class="block dark:hidden" alt="">
+                            <img src={logoLight.src} class="hidden dark:block" alt="">
+                        </a>
+                        <p class="mt-6 text-gray-400">APPT N9 2EME ETAGE<br>RUE ABDARI BD HASSAN II<br>Rabat, Maroc</p>
+                    </div>
+
+                    <div class="md:col-span-9 mt-8 md:mt-0">
+                        <div class="grid md:grid-cols-3 grid-cols-1">
+                            <div class="mt-8 md:mt-0">
+                                <h5 class="text-lg font-semibold text-white mb-6">Contact</h5>
+                                <ul class="list-none text-gray-400">
+                                    <li class="mb-4"><a href="tel:+212708893412" class="hover:text-teal-500 duration-500"><i class="mdi mdi-phone me-2"></i>+212 708893412</a></li>
+                                    <li class="mb-4"><a href="mailto:contact@the-elect-coders.com" class="hover:text-teal-500 duration-500"><i class="mdi mdi-email me-2"></i>contact@the-elect-coders.com</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-8 md:mt-0">
+                                <h5 class="text-lg font-semibold text-white mb-6">Liens Rapides</h5>
+                                <ul class="list-none text-gray-400">
+                                    <li class="mb-4"><a href="#about" class="hover:text-teal-500 duration-500"><i class="mdi mdi-chevron-right me-2"></i>À propos</a></li>
+                                    <li class="mb-4"><a href="#services" class="hover:text-teal-500 duration-500"><i class="mdi mdi-chevron-right me-2"></i>Services</a></li>
+                                    <li class="mb-4"><a href="#process" class="hover:text-teal-500 duration-500"><i class="mdi mdi-chevron-right me-2"></i>Processus</a></li>
+                                    <li class="mb-4"><a href="#contact" class="hover:text-teal-500 duration-500"><i class="mdi mdi-chevron-right me-2"></i>Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-8 md:mt-0">
+                                <h5 class="text-lg font-semibold text-white mb-6">Suivez-nous</h5>
+                                <ul class="list-none text-gray-400">
+                                    <li class="inline"><a href="https://www.facebook.com/profile.php?id=61558819269222" target="_blank" class="size-8 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center border border-gray-800 hover:border-teal-500 hover:text-teal-500 rounded-full me-1"><i class="mdi mdi-facebook"></i></a></li>
+                                    <li class="inline"><a href="https://www.instagram.com/theelectcoders/" target="_blank" class="size-8 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center border border-gray-800 hover:border-teal-500 hover:text-teal-500 rounded-full me-1"><i class="mdi mdi-instagram"></i></a></li>
+                                    <li class="inline"><a href="https://www.linkedin.com/company/theelectcoders/" target="_blank" class="size-8 inline-flex items-center justify-center tracking-wide align-middle transition duration-500 ease-in-out text-base text-center border border-gray-800 hover:border-teal-500 hover:text-teal-500 rounded-full me-1"><i class="mdi mdi-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-6 border-t border-gray-800">
+        <div class="container relative text-center">
+            <div class="grid md:grid-cols-2 items-center gap-6">
+                <div class="md:text-start text-center">
+                    <p class="mb-0 text-gray-400">© 2024 THE ELECT CODERS. Tous droits réservés.</p>
+                </div>
+
+                <div class="md:text-end text-center">
+                    <p class="mb-0 text-gray-400">Conçu avec <i class="mdi mdi-heart text-red-600"></i> par THE ELECT CODERS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

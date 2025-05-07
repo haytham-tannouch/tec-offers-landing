@@ -1,0 +1,218 @@
+---
+import { servicesData } from "../data/data";
+
+interface SevicesData {
+    icon: string;
+    title: string;
+    desc: string;
+}
+---
+
+<section
+    class="relative md:py-24 py-16 bg-slate-50 dark:bg-slate-800"
+    id="services"
+>
+    <div class="container relative">
+        <div class="container relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3
+                        class="mb-6 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold"
+                    >
+                        Ce que vous recevez gratuitement
+                    </h3>
+                    <ul class="list-none text-slate-400">
+                        <li class="mb-3 flex items-center">
+                            <i class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                            ></i>
+                            Un site vitrine design et responsive
+                        </li>
+                        <li class="mb-3 flex items-center">
+                            <i class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                            ></i>
+                            Optimisé pour les moteurs de recherche (SEO)
+                        </li>
+                        <li class="mb-3 flex items-center">
+                            <i class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                            ></i>
+                            Intégration de vos contenus
+                        </li>
+                        <li class="mb-3 flex items-center">
+                            <i class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                            ></i>
+                            Compatible mobile/tablette
+                        </li>
+                        <li class="mb-3 flex items-center">
+                            <i class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                            ></i>
+                            Livraison rapide sous quelques jours
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div
+                        class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900"
+                    >
+                        <h4 class="text-xl font-semibold mb-4">
+                            Services Additionnels
+                        </h4>
+                        <p class="text-slate-400 mb-6">
+                            Pour aller plus loin, nous proposons également :
+                        </p>
+                        <ul class="list-none text-slate-400">
+                            <li class="mb-3 flex items-center">
+                                <i
+                                    class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                                ></i>
+                                Maintenance mensuelle
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <i
+                                    class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                                ></i>
+                                Optimisation SEO avancée
+                            </li>
+                            <li class="mb-3 flex items-center">
+                                <i
+                                    class="mdi mdi-check-circle text-teal-500 text-xl me-2"
+                                ></i>
+                                Formation à l'utilisation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6 mt-6"
+        >
+            <div
+                class="group rounded-md shadow-sm dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit"
+            >
+                <div
+                    class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500"
+                >
+                    <i data-feather="monitor" class="size-6 rotate-45"></i>
+                </div>
+
+                <div class="content mt-6 relative z-1">
+                    <h5 class="title text-lg font-semibold">
+                        Site vitrine
+                    </h5>
+                    <p class="text-slate-400 mt-3">
+                        Un site vitrine professionnel, moderne et rapide
+                    </p>
+                </div>
+
+                <div class="absolute bottom-0 -end-16">
+                    <i
+                        data-feather="monitor"
+                        class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"
+                    ></i>
+                </div>
+            </div>
+
+            <div
+                class="group rounded-md shadow-sm dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit"
+            >
+                <div
+                    class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500"
+                >
+                    <i data-feather="edit" class="size-6 rotate-45"></i>
+                </div>
+
+                <div class="content mt-6 relative z-1">
+                    <h5 class="title text-lg font-semibold">Personnalisé</h5>
+                    <p class="text-slate-400 mt-3">
+                        Créé sur-mesure selon votre activité
+                    </p>
+                </div>
+
+                <div class="absolute bottom-0 -end-16">
+                    <i
+                        data-feather="edit"
+                        class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"
+                    ></i>
+                </div>
+            </div>
+
+            <div
+                class="group rounded-md shadow-sm dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit"
+            >
+                <div
+                    class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500"
+                >
+                    <i data-feather="smartphone" class="size-6 rotate-45"></i>
+                </div>
+
+                <div class="content mt-6 relative z-1">
+                    <h5 class="title text-lg font-semibold">
+                        Responsive
+                    </h5>
+                    <p class="text-slate-400 mt-3">
+                        Compatible mobile & tablette
+                    </p>
+                </div>
+
+                <div class="absolute bottom-0 -end-16">
+                    <i
+                        data-feather="smartphone"
+                        class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"
+                    ></i>
+                </div>
+            </div>
+
+            <div
+                class="group rounded-md shadow-sm dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit"
+            >
+                <div
+                    class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500"
+                >
+                    <i data-feather="globe" class="size-6 rotate-45"></i>
+                </div>
+
+                <div class="content mt-6 relative z-1">
+                    <h5 class="title text-lg font-semibold">
+                        Nom de domaine
+                    </h5>
+                    <p class="text-slate-400 mt-3">
+                        Nom de domaine & adresses e-mail professionnelles incluses
+                    </p>
+                </div>
+
+                <div class="absolute bottom-0 -end-16">
+                    <i
+                        data-feather="globe"
+                        class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"
+                    ></i>
+                </div>
+            </div>
+
+            <div
+                class="group rounded-md shadow-sm dark:shadow-gray-700 relative bg-white dark:bg-slate-900 p-6 overflow-hidden h-fit"
+            >
+                <div
+                    class="flex items-center justify-center size-14 -rotate-45 bg-gradient-to-r from-transparent to-teal-500/10 text-teal-500 text-center rounded-full group-hover:bg-teal-500/10 duration-500"
+                >
+                    <i data-feather="search" class="size-6 rotate-45"></i>
+                </div>
+
+                <div class="content mt-6 relative z-1">
+                    <h5 class="title text-lg font-semibold">
+                        SEO
+                    </h5>
+                    <p class="text-slate-400 mt-3">
+                        Optimisation SEO pour Google
+                    </p>
+                </div>
+
+                <div class="absolute bottom-0 -end-16">
+                    <i
+                        data-feather="search"
+                        class="size-48 text-teal-500 opacity-[0.04] dark:opacity-[0.04] group-hover:opacity-10 duration-500"
+                    ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+---
+import karineImg from '../assets/images/client/Karine M_optimized.webp';
+import hichamImg from '../assets/images/client/Hicham R_optimized.webp';
+import sophieImg from '../assets/images/client/Sophie T_optimized.webp';
+---
+
+<section class="relative md:py-24 py-16 bg-slate-900" id="review">
+    <div class="container">
+        <div class="grid grid-cols-1 text-center">
+            <div class="mb-12">
+                <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold text-white">Avis <span class="text-teal-500">clients</span></h3>
+                <p class="text-white/70 text-lg max-w-2xl mx-auto">Après notre succès en France, nous apportons la même qualité au Maroc</p>
+                <p class="text-white/70 text-lg max-w-2xl mx-auto mt-4">Des centaines de professionnels nous ont fait confiance pour booster leur activité en ligne. Voici ce qu'ils en disent :</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+            <div class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-slate-800">
+                <div class="flex items-center mb-4">
+                    <div class="size-12 rounded-full shadow-md dark:shadow-gray-800 p-2 bg-white">
+                        <img src={karineImg.src} class="rounded-full" alt="Dr. Karine M.">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="text-white mb-0">Dr. Karine M.</h6>
+                        <small class="text-slate-400">Médecin généraliste</small>
+                    </div>
+                </div>
+                <p class="text-slate-400">"J'ai doublé mes demandes de rendez-vous en 1 mois. Grâce à leur site clair et professionnel, mes patients trouvent facilement mes coordonnées et réservent en ligne. Je recommande à 100% !"</p>
+            </div>
+
+            <div class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-slate-800">
+                <div class="flex items-center mb-4">
+                    <div class="size-12 rounded-full shadow-md dark:shadow-gray-800 p-2 bg-white">
+                        <img src={hichamImg.src} class="rounded-full" alt="Hicham R.">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="text-white mb-0">Hicham R.</h6>
+                        <small class="text-slate-400">Électricien indépendant</small>
+                    </div>
+                </div>
+                <p class="text-slate-400">"Mon activité a pris un tournant. Je pensais qu'un site pro coûtait trop cher. Avec leur offre gratuite, j'ai eu un site magnifique, et mes clients me contactent directement via WhatsApp."</p>
+            </div>
+
+            <div class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-slate-800">
+                <div class="flex items-center mb-4">
+                    <div class="size-12 rounded-full shadow-md dark:shadow-gray-800 p-2 bg-white">
+                        <img src={sophieImg.src} class="rounded-full" alt="Sophie T.">
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="text-white mb-0">Sophie T.</h6>
+                        <small class="text-slate-400">Coach de vie</small>
+                    </div>
+                </div>
+                <p class="text-slate-400">"Une équipe réactive et à l'écoute, j'ai été accompagné du début à la fin. Chaque demande de modification a été prise en compte. Merci pour votre sérieux !"</p>
+            </div>
+        </div>
+    </div>
+</section> 
