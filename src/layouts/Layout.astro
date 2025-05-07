@@ -50,6 +50,25 @@ import Switcher from '../components/switcher.astro'
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145915006.js"></script>
         <!-- End of HubSpot Embed Code -->
 
+        <!-- Hotjar Tracking Code for THE ELECT CODERS LANDING PAGES -->
+        <script>
+            // @ts-ignore: Hotjar external script
+            (function(h,o,t,j,a,r){
+                // @ts-ignore: Hotjar external script
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                // @ts-ignore: Hotjar external script
+                h._hjSettings={hjid:5291783,hjsv:6};
+                // @ts-ignore: Hotjar external script
+                a=o.getElementsByTagName('head')[0];
+                // @ts-ignore: Hotjar external script
+                r=o.createElement('script');r.async=1;
+                // @ts-ignore: Hotjar external script
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                // @ts-ignore: Hotjar external script
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+
     </head>
 
 	<body class="font-libre-franklin text-base text-slate-900 dark:text-white bg-white dark:bg-slate-900">
@@ -64,20 +83,6 @@ import Switcher from '../components/switcher.astro'
       });
 
       feather.replace();
-
-      // Facebook Conversion Tracking
-      function trackFacebookConversion(eventName) {
-        if (typeof fbq !== 'undefined') {
-          fbq('track', eventName);
-        }
-      }
-
-      // Exemple d'utilisation pour le formulaire de contact
-      document.addEventListener('submit', function(e) {
-        if (e.target.id === 'contact-form') {
-          trackFacebookConversion('Lead');
-        }
-      });
 
     </script>
 	</body>

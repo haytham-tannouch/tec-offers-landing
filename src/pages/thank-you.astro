@@ -17,13 +17,27 @@ import Footer from '../components/footer.astro';
                 </div>
 
                 <h1 class="text-white font-bold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl my-5">
-                    Merci pour votre inscription !
+                    Merci pour votre demande de site web gratuit !
                 </h1>
             
                 <p class="text-white/90 text-xl max-w-2xl mx-auto mt-6">
-                    Nous avons bien reçu votre demande et nous vous contacterons dans les plus brefs délais pour planifier votre appel découverte.
+                    Votre demande a bien été reçue. <br>
+                    <b>Il ne vous reste plus qu'une seule étape&nbsp;: réserver votre appel découverte gratuit avec notre équipe.</b><br>
+                    Lors de cet appel, nous discuterons de vos besoins, répondrons à vos questions et validerons ensemble la création de votre site web professionnel offert par The Elect Coders.<br>
+                    <br>
+                    <span class="text-white font-semibold">Cliquez sur le bouton ci-dessous pour choisir votre créneau&nbsp;:</span>
                 </p>
-            
+
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <div class="flex justify-center mt-10">
+                  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theelectcoders/appel-de-decouverte?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="h-14 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-lg bg-white hover:bg-slate-100 text-blue-600 text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Réserver mon appel découverte
+                  </a>
+                </div>
+                <!-- Calendly link widget end -->
+
                 <div class="relative mt-12">
                     <a href="/" class="h-14 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-lg bg-white hover:bg-slate-100 text-blue-600 text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                         Retour à l'accueil
@@ -31,7 +45,13 @@ import Footer from '../components/footer.astro';
                 </div>
             </div>
         </div>
+        <script>
+          // @ts-ignore
+          declare var fbq: any;
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead');
+          }
+        </script>
     </section>
 
-    <Footer/>
 </Layout> 

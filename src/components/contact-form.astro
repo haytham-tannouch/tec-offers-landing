@@ -1,4 +1,4 @@
-<section class="relative md:py-24 py-16" id="contact">
+<section class="md:py-24 py-16" id="contact">
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -6,90 +6,24 @@
                 <p class="text-slate-400 max-w-xl">Prenez rendez-vous pour un appel découverte gratuit et découvrez comment nous pouvons vous aider à créer votre site web professionnel.</p>
             </div>
             <div class="lg:ml-8">
-                <form 
-                    name="contact" 
-                    method="POST" 
-                    class="p-6 rounded-md shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900"
-                >
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="form-label text-slate-400 mb-2 block">Prénom</label>
-                                <input name="firstname" type="text" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="Prénom" required>
-                            </div>
-                            <div>
-                                <label class="form-label text-slate-400 mb-2 block">Nom</label>
-                                <input name="lastname" type="text" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="Nom" required>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Email professionnel</label>
-                            <input name="email" type="email" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="votre@email.com" required>
-                        </div>
-                        
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Téléphone</label>
-                            <input name="phone" type="tel" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="06 XX XX XX XX" required>
-                        </div>
-                        
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Nom de votre entreprise</label>
-                            <input name="company" type="text" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" placeholder="Entreprise" required>
-                        </div>
-
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Secteur d'activité</label>
-                            <select name="sector" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" required>
-                                <option value="">Sélectionnez votre secteur</option>
-                                <option value="services">Services aux professionnels</option>
-                                <option value="retail">Commerce de détail</option>
-                                <option value="health">Santé & Bien-être</option>
-                                <option value="education">Éducation & Formation</option>
-                                <option value="construction">Construction & Immobilier</option>
-                                <option value="other">Autre</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Budget mensuel pour l'hébergement</label>
-                            <select name="budget" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" required>
-                                <option value="">Sélectionnez votre budget</option>
-                                <option value="500-1000">500-1000 MAD</option>
-                                <option value="1000-2000">1000-2000 MAD</option>
-                                <option value="2000-5000">2000-5000 MAD</option>
-                                <option value="5000-10000">5000-10000 MAD</option>
-                                <option value="10000+">Plus de 10000 MAD</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Délai souhaité pour la mise en ligne</label>
-                            <select name="timeline" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" required>
-                                <option value="">Sélectionnez un délai</option>
-                                <option value="urgent">Urgent (1-2 semaines)</option>
-                                <option value="normal">Normal (2-4 semaines)</option>
-                                <option value="flexible">Flexible (1-2 mois)</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="form-label text-slate-400 mb-2 block">Décrivez brièvement votre projet</label>
-                            <textarea name="message" class="form-input w-full py-2 px-4 border border-gray-200 dark:border-gray-700 rounded-md bg-white dark:bg-slate-900 focus:border-teal-500 focus:ring-0" rows="4" placeholder="Quels sont vos objectifs ? Quelles fonctionnalités souhaitez-vous ?" required></textarea>
-                        </div>
-                    </div>
-                    <input type="submit" class="btn bg-teal-500 hover:bg-teal-600 border-teal-500 hover:border-teal-600 text-white rounded-md w-full py-3 px-6 mt-6 transition duration-500 ease-in-out" value="Réserver mon appel découverte" />
-                </form>
+                <div id="hubspot-form"></div>
+                <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  // @ts-ignore: hbspt is loaded via external script
+                  document.addEventListener('DOMContentLoaded', function() {
+                    // @ts-ignore: hbspt is loaded via external script
+                    if (window.hbspt && window.hbspt.forms) {
+                      // @ts-ignore: hbspt is loaded via external script
+                      window.hbspt.forms.create({
+                        portalId: "145915006",
+                        formId: "a8839a28-900c-4ee2-959c-95085aa74b89",
+                        region: "eu1",
+                        target: "#hubspot-form"
+                      });
+                    }
+                  });
+                </script>
             </div>
         </div>
     </div>
-</section>
-
-<script>
-    // Facebook Conversion Tracking
-    document.querySelector('form[name="contact"]')?.addEventListener('submit', function(e) {
-        if (typeof fbq !== 'undefined') {
-            fbq('track', 'Lead');
-        }
-    });
-</script> 
+</section> 
