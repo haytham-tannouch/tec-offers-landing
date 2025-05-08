@@ -1,7 +1,6 @@
 ---
-	import '../assets/css/tailwind.css'
-  import '../../node_modules/tobii/dist/css/tobii.min.css'
-import Switcher from '../components/switcher.astro'
+import '../assets/css/tailwind.css'
+import '../../node_modules/tobii/dist/css/tobii.min.css'
 ---
 <!DOCTYPE html>
 <html lang="fr" class="light scroll-smooth" dir="ltr">
@@ -76,14 +75,15 @@ import Switcher from '../components/switcher.astro'
 
     <script>
       import Tobii from "tobii";
-      import feather from 'feather-icons'
   
       document.addEventListener("DOMContentLoaded", function () {
         new Tobii();
       });
 
-      feather.replace();
+      import feather from 'feather-icons'
 
+      feather.replace();
+      
     </script>
 	</body>
 </html>

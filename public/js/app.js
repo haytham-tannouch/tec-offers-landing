@@ -31,39 +31,10 @@
 /*     Menus         */
 /*********************/
 
-function windowScroll() {
-    const navbar = document.getElementById("navbar");
-    if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop >= 50
-    ) {
-        navbar.classList.add("is-sticky");
-    } else {
-        navbar.classList.remove("is-sticky");
-    }
-}
-
-window.addEventListener('scroll', (ev) => {
-    ev.preventDefault();
-    windowScroll();
-})
-
-// Navbar Active Class
-try {
-    var spy = new Gumshoe('#navbar-navlist a', {
-        // Active classes
-        // navClass: 'active', // applied to the nav list item
-        // contentClass: 'active', // applied to the content
-        offset: 80
-    });
-} catch (error) {
-    
-}
-
 
 // Smooth scroll 
 try {
-    var scroll = new SmoothScroll('#navbar-navlist a', {
+    const scroll = new SmoothScroll('#navbar-navlist a', {
         speed: 800,
         offset: 80
     });
@@ -83,13 +54,13 @@ const toggleCollapse = (elementId, show = true) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle target elements using [data-collapse]
-    document.querySelectorAll('[data-collapse]').forEach(function (collapseToggleEl) {
-        var collapseId = collapseToggleEl.getAttribute('data-collapse');
+    for (const collapseToggleEl of document.querySelectorAll('[data-collapse]')) {
+        const collapseId = collapseToggleEl.getAttribute('data-collapse');
 
-        collapseToggleEl.addEventListener('click', function () {
+        collapseToggleEl.addEventListener('click', () => {
             toggleCollapse(collapseId, document.getElementById(collapseId).classList.contains('hidden'));
         });
-    });
+    }
 });
 
 window.toggleCollapse = toggleCollapse;
@@ -98,13 +69,13 @@ window.toggleCollapse = toggleCollapse;
 /*    Back To TOp    */
 /*********************/
 
-window.onscroll = function () {
+window.onscroll = () => {
     scrollFunction();
 };
 
 function scrollFunction() {
-    var mybutton = document.getElementById("back-to-top");
-    if(mybutton!=null){
+    const mybutton = document.getElementById("back-to-top");
+    if (mybutton !== null) {
         if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
             mybutton.classList.add("block");
             mybutton.classList.remove("hidden");
@@ -124,7 +95,7 @@ function topFunction() {
 /* Dark & Light Mode */
 /*********************/
 try {
-    function changeTheme(e){
+    const changeTheme = (e) => {
         e.preventDefault()
         const htmlTag = document.getElementsByTagName("html")[0]
         
@@ -151,7 +122,7 @@ try {
 /*********************/
 try{
     const htmlTag = document.getElementsByTagName("html")[0]
-    function changeLayout(e){
+    const changeLayout = (e) => {
         e.preventDefault()
         const switcherRtl = document.getElementById("switchRtl")
         if(switcherRtl.innerText === "LTR"){
@@ -170,16 +141,18 @@ catch(err){}
 /*********************/
 /*   Feather Icons   */
 /*********************/
-feather.replace();
+
+
+
 
 /*********************/
 /*  Active Sidebar   */
 /*********************/
-(function () {
-    var current = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);;
+(() => {
+    const current = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);;
     if (current === "") return;
-    var menuItems = document.querySelectorAll('.sidebar-nav a');
-    for (var i = 0, len = menuItems.length; i < len; i++) {
+    const menuItems = document.querySelectorAll('.sidebar-nav a');
+    for (let i = 0, len = menuItems.length; i < len; i++) {
         if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
             menuItems[i].parentElement.className += " active";
         }
@@ -192,52 +165,53 @@ feather.replace();
 try {
     // Contact Form
     function validateForm() {
-        var name = document.forms["myForm"]["name"].value;
-        var email = document.forms["myForm"]["email"].value;
-        var subject = document.forms["myForm"]["subject"].value;
-        var comments = document.forms["myForm"]["comments"].value;
+        const form = document.forms.myForm;
+        const name = form.name.value;
+        const email = form.email.value;
+        const subject = form.subject.value;
+        const comments = form.comments.value;
         document.getElementById("error-msg").style.opacity = 0;
         document.getElementById('error-msg').innerHTML = "";
-        if (name == "" || name == null) {
+        if (name === "" || name === null) {
             document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning error_message'>*Please enter a Name*</div>";
             fadeIn();
             return false;
         }
-        if (email == "" || email == null) {
+        if (email === "" || email === null) {
             document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning error_message'>*Please enter a Email*</div>";
             fadeIn();
             return false;
         }
-        if (subject == "" || subject == null) {
+        if (subject === "" || subject === null) {
             document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning error_message'>*Please enter a Subject*</div>";
             fadeIn();
             return false;
         }
-        if (comments == "" || comments == null) {
+        if (comments === "" || comments === null) {
             document.getElementById('error-msg').innerHTML = "<div class='alert alert-warning error_message'>*Please enter a Comments*</div>";
             fadeIn();
             return false;
         }
-        var xhttp = new XMLHttpRequest();
+        const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 document.getElementById("simple-msg").innerHTML = this.responseText;
-                document.forms["myForm"]["name"].value = "";
-                document.forms["myForm"]["email"].value = "";
-                document.forms["myForm"]["subject"].value = "";
-                document.forms["myForm"]["comments"].value = "";
+                form.name.value = "";
+                form.email.value = "";
+                form.subject.value = "";
+                form.comments.value = "";
             }
         };
         xhttp.open("POST", "php/contact.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments);
+        xhttp.send(`name=${name}&email=${email}&subject=${subject}&comments=${comments}`);
         return false;
     }
 
     function fadeIn() {
-        var fade = document.getElementById("error-msg");
-        var opacity = 0;
-        var intervalID = setInterval(function () {
+        const fade = document.getElementById("error-msg");
+        let opacity = 0;
+        const intervalID = setInterval(() => {
             if (opacity < 1) {
                 opacity = opacity + 0.5
                 fade.style.opacity = opacity;

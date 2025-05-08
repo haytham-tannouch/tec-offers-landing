@@ -1,5 +1,5 @@
 ---
-import aboutImg from "../assets/images/about.jpg";
+import aboutImg from "../assets/images/about.webp";
 ---
 
 <section class="relative md:py-24 py-16">
@@ -10,8 +10,11 @@ import aboutImg from "../assets/images/about.jpg";
           <div class="relative">
             <img
               src={aboutImg.src}
-              class="rounded-full shadow-sm dark:shadow-gray-700"
-              alt=""
+              class="rounded-lg shadow-lg"
+              alt="About us image"
+              width="800"
+              height="600"
+              loading="lazy"
             />
 
             <div
