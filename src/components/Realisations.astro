@@ -1,0 +1,88 @@
+---
+const realisations = [
+  {
+    title: "Restaurant Gastronomique",
+    description: "Site vitrine élégant pour un restaurant haut de gamme à Casablanca",
+    image: "/images/restaurant.webp",
+    technologies: ["Astro", "Tailwind CSS", "SEO Optimisé"],
+    points: ["Design moderne", "Réservation en ligne", "Menu interactif"]
+  },
+  {
+    title: "Agence Immobilière",
+    description: "Plateforme professionnelle pour une agence immobilière à Rabat",
+    image: "/images/immobilier.webp",
+    technologies: ["Astro", "Alpine.js", "API REST"],
+    points: ["Catalogue de biens", "Formulaire de contact", "Géolocalisation"]
+  },
+  {
+    title: "Centre de Formation",
+    description: "Site web éducatif pour un centre de formation professionnelle",
+    image: "/images/formation.webp",
+    technologies: ["Astro", "Tailwind CSS", "CMS Headless"],
+    points: ["Catalogue de formations", "Inscription en ligne", "Blog intégré"]
+  }
+];
+---
+
+<section id="realisations" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Nos Réalisations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {realisations.map((realisation) => (
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+          <div class="aspect-w-16 aspect-h-9">
+            <img
+              src={realisation.image}
+              alt={realisation.title}
+              class="w-full h-full object-cover"
+              loading="lazy"
+              width="400"
+              height="225"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">{realisation.title}</h3>
+            <p class="text-gray-600 mb-4">{realisation.description}</p>
+            <div class="mb-4">
+              <h4 class="font-semibold mb-2">Technologies utilisées :</h4>
+              <div class="flex flex-wrap gap-2">
+                {realisation.technologies.map((tech) => (
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Points forts :</h4>
+              <ul class="space-y-1">
+                {realisation.points.map((point) => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+  .aspect-w-16 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style> 

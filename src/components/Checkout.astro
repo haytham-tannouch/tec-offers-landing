@@ -1,0 +1,41 @@
+<section id="checkout" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Réservez Votre Site Web Gratuit</h2>
+        <p class="text-xl text-gray-600">
+          Remplissez le formulaire ci-dessous pour commencer votre projet
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <!-- HubSpot Form -->
+        <div class="hubspot-form">
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+          <script>
+            window.onload = function() {
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "YOUR_PORTAL_ID",
+                formId: "YOUR_FORM_ID",
+                target: "#hubspot-form-container"
+              });
+            }
+          </script>
+          <div id="hubspot-form-container"></div>
+        </div>
+
+        <div class="mt-8 text-center text-sm text-gray-500">
+          <p>En soumettant ce formulaire, vous acceptez notre politique de confidentialité.</p>
+          <p>Nous ne partagerons jamais vos informations avec des tiers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hubspot-form {
+    min-height: 400px;
+  }
+</style> 

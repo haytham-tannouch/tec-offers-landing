@@ -1,30 +1,132 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import About from '../components/about.astro';
-import Services from '../components/services.astro';
-import ProcessTab from '../components/process-tab.astro';
-import Cta from '../components/cta.astro';
-import Price from '../components/price.astro';
-import Footer from '../components/footer.astro';
-import Objectives from '../components/objectives.astro';
-import Testimonials from '../components/testimonials.astro';
-import ContactForm from '../components/contact-form.astro';
-import Hero from '../components/hero.astro';
-import WhyFree from '../components/whyFree.astro';
+import Hero from '../components/Hero.astro';
+import Realisations from '../components/Realisations.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Offre from '../components/Offre.astro';
+import Process from '../components/Process.astro';
+import FAQ from '../components/FAQ.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Checkout from '../components/Checkout.astro';
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Hero />
-    <About />
-	<WhyFree />
-    <Services />
-    <ProcessTab />
-	<Cta />
-    <Objectives />
-    <Testimonials />
-    <Price/>
-    <ContactForm />
-	<Footer/>
-</Layout>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Site Web Gratuit - Offre Spéciale</title>
+		<meta name="description" content="Obtenez votre site web professionnel gratuitement. Offre limitée incluant 5 pages, nom de domaine, formation et SEO." />
+		
+		<!-- Preload des polices -->
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<!-- Meta tags pour le partage social -->
+		<meta property="og:title" content="Site Web Gratuit - Offre Spéciale" />
+		<meta property="og:description" content="Obtenez votre site web professionnel gratuitement. Offre limitée incluant 5 pages, nom de domaine, formation et SEO." />
+		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:url" content="https://votre-domaine.com" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://js.hsforms.net" crossorigin>
 
+		<!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2432832607055349');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=VOTRE_PIXEL_ID&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- End Meta Pixel Code -->
 
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145915006.js"></script>
+        <!-- End of HubSpot Embed Code -->
+
+        <!-- Hotjar Tracking Code for THE ELECT CODERS LANDING PAGES -->
+        <script>
+            // @ts-ignore: Hotjar external script
+            (function(h,o,t,j,a,r){
+                // @ts-ignore: Hotjar external script
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                // @ts-ignore: Hotjar external script
+                h._hjSettings={hjid:5291783,hjsv:6};
+                // @ts-ignore: Hotjar external script
+                a=o.getElementsByTagName('head')[0];
+                // @ts-ignore: Hotjar external script
+                r=o.createElement('script');r.async=1;
+                // @ts-ignore: Hotjar external script
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                // @ts-ignore: Hotjar external script
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+	</head>
+	<body class="font-sans antialiased">
+		<main>
+			<Hero />
+			<Realisations />
+			<Testimonials />
+			<Offre />
+			<Process />
+			<FAQ />
+			<FinalCTA />
+			<Checkout />
+		</main>
+
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="container mx-auto px-4">
+				<div class="text-center">
+					<p class="text-gray-400">
+						© 2024 Votre Entreprise. Tous droits réservés.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	}
+
+	html {
+		font-family: var(--font-sans);
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		line-height: 1.5;
+	}
+
+	/* Optimisations de performance */
+	img {
+		content-visibility: auto;
+	}
+
+	/* Animations optimisées */
+	@media (prefers-reduced-motion: reduce) {
+		* {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+</style>

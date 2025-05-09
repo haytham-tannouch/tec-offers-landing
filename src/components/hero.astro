@@ -1,34 +1,44 @@
-<section class="relative table w-full py-36 lg:py-64 overflow-hidden" id="home">
-    <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute image-wrap -top-[350px] -bottom-[350px] -start-[100px] -end-[100px] min-w-full w-auto min-h-full h-auto overflow-hidden m-auto bg-[url('../../assets/images/bg/1.webp')] bg-no-repeat bg-center bg-cover"></div>
+<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-purple-900 text-white overflow-hidden">
+  <div class="container mx-auto px-4 py-16 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-6">
+        Votre Site Web Professionnel <span class="text-yellow-400">Gratuit</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        Transformez votre présence en ligne avec un site web moderne, rapide et optimisé pour le référencement.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#checkout" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
+          Obtenir Mon Site Gratuit
+        </a>
+        <a href="#realisations" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors">
+          Voir Nos Réalisations
+        </a>
+      </div>
     </div>
-    <div class="absolute inset-0 bg-slate-900/70"></div>
-
-    <div class="container relative">
-        <div class="grid grid-cols-1 text-center">
-            <div class="text-center">
-                <span class="bg-teal-500/10 text-teal-500 text-sm font-bold px-2.5 py-0.5 rounded h-5">Offre Exclusive - 10 Projets/Mois</span>
-            </div>
-
-            <h4 class="text-white font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl my-5">Votre Site Web Professionnel <span class="text-teal-500">Gratuit</span> en 7 Jours</h4>
-        
-            <p class="text-white/70 text-lg max-w-xl mx-auto mb-8">Boostez votre visibilité en ligne avec un site web moderne et performant, sans aucun investissement initial. Design premium, SEO optimisé, et support technique inclus.</p>
-        
-            <div class="relative mt-8 flex justify-center gap-4">
-                <a href="#contact" class="h-12 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-md bg-teal-500 text-white hover:bg-teal-600 transition duration-500">Réserver mon appel découverte gratuit</a>
-            </div>
-        </div>
-    </div>
+  </div>
+  <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
 </section>
 
-<div class="relative">
-    <div class="absolute block w-full h-auto bottom-[25px] z-1 start-0">
-        <a href="#about"><i class="mdi mdi-arrow-down absolute top-0 start-0 end-0 text-center inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 h-12 w-12 mx-auto shadow-md dark:shadow-gray-800"></i></a>
-    </div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('hero-title').classList.add('animate-fade-in');
+  });
+</script>
 
-    <div class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden text-white dark:text-slate-900">
-        <svg class="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
-        </svg>
-    </div>
-</div> 
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+</style> 

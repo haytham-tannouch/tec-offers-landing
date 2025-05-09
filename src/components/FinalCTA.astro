@@ -1,0 +1,72 @@
+<section class="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="bg-yellow-400 text-blue-900 inline-block px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+        Offre Limitée - Plus que 3 places disponibles aujourd'hui !
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ne Manquez Pas Cette Opportunité Exceptionnelle
+      </h2>
+      
+      <p class="text-xl mb-8 text-gray-200">
+        Obtenez votre site web professionnel gratuitement et transformez votre présence en ligne dès aujourd'hui.
+      </p>
+
+      <div class="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-8">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+          <div class="text-center md:text-left">
+            <div class="text-3xl font-bold mb-2">Site Web Gratuit</div>
+            <div class="text-gray-300">Valeur: 15,000 MAD</div>
+          </div>
+          <div class="text-4xl font-bold text-yellow-400">0 MAD</div>
+        </div>
+      </div>
+
+      <a
+        href="#checkout"
+        class="inline-block bg-yellow-400 text-blue-900 px-12 py-6 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors transform hover:scale-105"
+      >
+        Obtenir Mon Site Gratuit
+      </a>
+
+      <p class="mt-6 text-sm text-gray-400">
+        * Offre limitée aux 10 premiers clients de ce mois
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Compte à rebours pour l'effet FOMO
+  const countdownElement = document.createElement('div');
+  countdownElement.className = 'text-yellow-400 text-xl font-bold mb-6';
+  document.querySelector('section').insertBefore(countdownElement, document.querySelector('h2'));
+
+  function updateCountdown() {
+    const now = new Date();
+    const endOfDay = new Date();
+    endOfDay.setHours(23, 59, 59, 999);
+    
+    const timeLeft = endOfDay - now;
+    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+    countdownElement.textContent = `Temps restant : ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+</style> 

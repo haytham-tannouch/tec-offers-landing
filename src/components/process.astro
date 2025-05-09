@@ -1,25 +1,101 @@
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <div class="p-6 rounded-md shadow-md dark:shadow-gray-800">
-        <div class="size-20 flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 rounded-md bg-teal-500/5 text-teal-500 text-2xl font-semibold">1</div>
-        <div class="mt-4">
-            <h5 class="text-xl font-semibold">Appel Découverte</h5>
-            <p class="text-slate-400 mt-3">Nous discutons de votre projet et validons votre éligibilité à l'offre gratuite.</p>
-        </div>
+---
+const steps = [
+  {
+    title: "Prise de Contact",
+    description: "Réservez un appel de découverte gratuit pour discuter de votre projet",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+    </svg>`
+  },
+  {
+    title: "Analyse des Besoins",
+    description: "Nous analysons vos besoins et objectifs pour créer la meilleure solution",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+    </svg>`
+  },
+  {
+    title: "Proposition Design",
+    description: "Nous vous présentons le design et l'architecture de votre site",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+    </svg>`
+  },
+  {
+    title: "Développement",
+    description: "Nous développons votre site web avec les dernières technologies",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+    </svg>`
+  },
+  {
+    title: "Livraison",
+    description: "Nous livrons votre site web et vous formons à son utilisation",
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+    </svg>`
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Notre Processus</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Un processus simple et efficace pour créer votre site web professionnel
+      </p>
     </div>
 
-    <div class="p-6 rounded-md shadow-md dark:shadow-gray-800">
-        <div class="size-20 flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 rounded-md bg-teal-500/5 text-teal-500 text-2xl font-semibold">2</div>
-        <div class="mt-4">
-            <h5 class="text-xl font-semibold">Création du Site</h5>
-            <p class="text-slate-400 mt-3">Notre équipe développe votre site web professionnel selon vos besoins.</p>
-        </div>
+    <div class="relative">
+      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+      
+      <div class="space-y-12">
+        {steps.map((step, index) => (
+          <div class="relative">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white z-10 mb-4 md:mb-0">
+                <div set:html={step.icon} />
+              </div>
+              <div class="md:ml-8 flex-1">
+                <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
+                  <h3 class="text-xl font-bold mb-2">{step.title}</h3>
+                  <p class="text-gray-600">{step.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="p-6 rounded-md shadow-md dark:shadow-gray-800">
-        <div class="size-20 flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 rounded-md bg-teal-500/5 text-teal-500 text-2xl font-semibold">3</div>
-        <div class="mt-4">
-            <h5 class="text-xl font-semibold">Livraison</h5>
-            <p class="text-slate-400 mt-3">Votre site est mis en ligne et vous êtes formé à son utilisation.</p>
-        </div>
-    </div>
-</div> 
+<style>
+  .step-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .step-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('step-enter-active');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.step').forEach(step => {
+    step.classList.add('step-enter');
+    observer.observe(step);
+  });
+</script> 

@@ -1,0 +1,88 @@
+---
+const faqs = [
+  {
+    question: "Combien de temps faut-il pour créer mon site web ?",
+    answer: "Le délai moyen est de 2 à 3 semaines, de la prise de contact à la mise en ligne. Cela inclut la conception, le développement et les tests."
+  },
+  {
+    question: "Quelles sont les fonctionnalités incluses dans l'offre ?",
+    answer: "L'offre inclut un site vitrine de 5 pages, un nom de domaine, une formation d'utilisation, l'optimisation SEO et un design responsive. Tous les éléments sont optimisés pour les performances."
+  },
+  {
+    question: "Puis-je modifier mon site web moi-même ?",
+    answer: "Oui, nous vous formons à l'utilisation de votre site web. Vous pourrez facilement modifier le contenu, les images et les textes sans connaissances techniques."
+  },
+  {
+    question: "Le site web sera-t-il optimisé pour les mobiles ?",
+    answer: "Absolument ! Votre site web sera entièrement responsive et s'adaptera parfaitement à tous les écrans, des smartphones aux ordinateurs de bureau."
+  },
+  {
+    question: "Comment fonctionne le référencement (SEO) ?",
+    answer: "Nous optimisons votre site web pour les moteurs de recherche dès sa création. Cela inclut la structure technique, les méta-données, et les bonnes pratiques SEO."
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Questions Fréquentes</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Tout ce que vous devez savoir sur notre offre de site web gratuit
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      {faqs.map((faq) => (
+        <div class="mb-6">
+          <button
+            class="w-full text-left bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+            onclick="this.classList.toggle('active')"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-bold">{faq.question}</h3>
+              <svg
+                class="w-6 h-6 transform transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div class="mt-4 text-gray-600 hidden">
+              {faq.answer}
+            </div>
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.querySelector('div:last-child');
+      const icon = button.querySelector('svg');
+      
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+<style>
+  button.active svg {
+    transform: rotate(180deg);
+  }
+  
+  button.active div:last-child {
+    display: block;
+  }
+</style> 
