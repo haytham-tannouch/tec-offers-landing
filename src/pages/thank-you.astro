@@ -68,7 +68,7 @@ import '../styles/global.css';
 	<body class="font-sans antialiased">
 		<main class="relative">
 			<!-- Section Hero avec fond dégradé -->
-			<section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 min-h-[350px] flex items-center justify-center py-20 md:py-32 overflow-hidden">
+			<section class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 flex items-center justify-center py-10 md:py-32 overflow-hidden">
 				<!-- Formes décoratives -->
 				<div class="absolute inset-0 overflow-hidden">
 					<div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -81,13 +81,38 @@ import '../styles/global.css';
 				<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400/20 via-transparent to-transparent scale-150"></div>
 
 				<div class="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
-					<h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in drop-shadow-lg">Merci pour votre demande !</h1>
+					<h1 class="text-4xl md:text-5xl text-white font-bold mb-4 animate-fade-in drop-shadow-lg">Merci pour votre demande !</h1>
 					<p class="text-xl md:text-2xl text-blue-100 animate-fade-in animation-delay-200 drop-shadow">Votre demande de site web gratuit a bien été reçue.</p>
 				</div>
+
+				
+			</section>
+			
+			<!-- Section Hero avec fond dégradé -->
+			<section class="relative flex items-center justify-center overflow-hidden">
+				<div class="text-center space-y-6">
+					<!-- Calendly link widget begin -->
+					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+					<div class="flex justify-center mt-10">
+					  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theelectcoders/appel-de-decouverte?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="h-14 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+						Réserver mon appel découverte
+					  </a>
+					</div>
+					<!-- Calendly link widget end -->
+					<div class="animate-fade-in animation-delay-800">
+						<a
+							href="/"
+							class="inline-block px-6 py-3 text-gray-600 font-medium hover:text-gray-900 transition-colors duration-200"
+						>
+							Retour à l'accueil
+						</a>
+					</div>
+				</div>				
 			</section>
 
 			<!-- Section principale -->
-			<section class="py-20 bg-gray-50">
+			<section class="bg-gray-50">
 				<div class="container mx-auto px-4">
 					<div class="max-w-3xl mx-auto">
 						<div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 animate-fade-in animation-delay-400">
@@ -101,26 +126,6 @@ import '../styles/global.css';
 								<p>
 									Lors de cet appel, nous discuterons de vos besoins, répondrons à vos questions et validerons ensemble la création de votre site web professionnel offert par The Elect Coders.
 								</p>
-							</div>
-						</div>
-
-						<div class="text-center space-y-6">
-							<!-- Calendly link widget begin -->
-							<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-							<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-							<div class="flex justify-center mt-10">
-							  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theelectcoders/appel-de-decouverte?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="h-14 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-lg bg-white hover:bg-slate-100 text-blue-600 text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-								Réserver mon appel découverte
-							  </a>
-							</div>
-							<!-- Calendly link widget end -->
-							<div class="animate-fade-in animation-delay-800">
-								<a
-									href="/"
-									class="inline-block px-6 py-3 text-gray-600 font-medium hover:text-gray-900 transition-colors duration-200"
-								>
-									Retour à l'accueil
-								</a>
 							</div>
 						</div>
 					</div>
