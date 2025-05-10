@@ -71,8 +71,10 @@ const faqs = [
       const content = button.querySelector('div:last-child');
       const icon = button.querySelector('svg');
       
-      content.classList.toggle('hidden');
-      icon.classList.toggle('rotate-180');
+      if (content && icon) {
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      }
     });
   });
 </script>

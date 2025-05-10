@@ -41,14 +41,22 @@
   // Compte à rebours pour l'effet FOMO
   const countdownElement = document.createElement('div');
   countdownElement.className = 'text-yellow-400 text-xl font-bold mb-6';
-  document.querySelector('section').insertBefore(countdownElement, document.querySelector('h2'));
+  
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('section');
+    const maxWidthDiv = section?.querySelector('.max-w-4xl');
+    if (section && maxWidthDiv) {
+      maxWidthDiv.insertBefore(countdownElement, maxWidthDiv.firstChild);
+    }
+  });
 
   function updateCountdown() {
     const now = new Date();
     const endOfDay = new Date();
     endOfDay.setHours(23, 59, 59, 999);
     
-    const timeLeft = endOfDay - now;
+    const timeLeft = endOfDay.getTime() - now.getTime();
     const hours = Math.floor(timeLeft / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);

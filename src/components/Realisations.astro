@@ -1,25 +1,28 @@
 ---
 const realisations = [
   {
-    title: "Restaurant Gastronomique",
-    description: "Site vitrine élégant pour un restaurant haut de gamme à Casablanca",
-    image: "/images/restaurant.webp",
-    technologies: ["Astro", "Tailwind CSS", "SEO Optimisé"],
-    points: ["Design moderne", "Réservation en ligne", "Menu interactif"]
+    title: "Agence Conseil Immobilier",
+    description: "Site vitrine professionnel pour une agence de conseil immobilier, avec prise de contact rapide.",
+    image: "/images/real_estate_consulting.webp",
+    technologies: ["WordPress", "WooCommerce", "Formulaire de contact"],
+    points: ["Design épuré et moderne", "Appel à l'action visible", "Navigation intuitive"],
+    url: "https://umojaconsulting.fr/"
   },
   {
-    title: "Agence Immobilière",
-    description: "Plateforme professionnelle pour une agence immobilière à Rabat",
-    image: "/images/immobilier.webp",
-    technologies: ["Astro", "Alpine.js", "API REST"],
-    points: ["Catalogue de biens", "Formulaire de contact", "Géolocalisation"]
+    title: "Life Plantation",
+    description: "Plateforme écologique pour l'achat d'arbres et le calcul de rendement, axée sur la durabilité.",
+    image: "/images/life_plantation.webp",
+    technologies: ["WordPress", "WooCommerce", "Stripe"],
+    points: ["Achat en ligne d'arbres", "Calculateur de rendement", "Engagement environnemental"],
+    url: "https://life-plantation.ch/"
   },
   {
-    title: "Centre de Formation",
-    description: "Site web éducatif pour un centre de formation professionnelle",
-    image: "/images/formation.webp",
-    technologies: ["Astro", "Tailwind CSS", "CMS Headless"],
-    points: ["Catalogue de formations", "Inscription en ligne", "Blog intégré"]
+    title: "Atelier de Poterie H'Enigma",
+    description: "Site créatif pour un atelier de poterie, mettant en avant les produits et le processus artisanal.",
+    image: "/images/pottery_studio.webp",
+    technologies: ["WordPress", "WooCommerce", "Blog"],
+    points: ["Présentation des produits", "Processus créatif détaillé", "Boutique en ligne"],
+    url: "https://h-enigma.com/"
   }
 ];
 ---
@@ -66,9 +69,15 @@ const realisations = [
                 ))}
               </ul>
             </div>
+            <a href={realisation.url} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition-colors">Voir le site</a>
           </div>
         </article>
       ))}
+    </div>
+    <div class="text-center mt-12">
+      <a href="#checkout" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition-colors text-lg font-semibold">
+        Nous avons encore plus de réalisations, cliquez pour les voir tous
+      </a>
     </div>
   </div>
 </section>

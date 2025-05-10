@@ -1,39 +1,36 @@
 ---
 const testimonials = [
   {
-    name: "Ahmed Benali",
-    role: "Restaurateur",
-    location: "Casablanca",
-    content: "Un site web magnifique qui a transformé notre visibilité en ligne. Les réservations ont augmenté de 40% depuis la mise en ligne !",
-    image: "/images/testimonial-1.webp"
-  },
-  {
-    name: "Sophie Martin",
-    role: "Directrice Marketing",
-    location: "Paris",
-    content: "Une équipe professionnelle qui a su comprendre nos besoins et créer un site web parfaitement adapté à notre image de marque.",
-    image: "/images/testimonial-2.webp"
-  },
-  {
-    name: "Karim El Fathi",
-    role: "Agent Immobilier",
-    location: "Rabat",
-    content: "Le site web a considérablement amélioré notre présence en ligne. Les clients peuvent maintenant facilement consulter nos biens.",
-    image: "/images/testimonial-3.webp"
-  },
-  {
-    name: "Marie Dubois",
-    role: "Formatrice",
-    location: "Lyon",
-    content: "Un site web moderne et intuitif qui nous permet de présenter nos formations de manière professionnelle.",
-    image: "/images/testimonial-4.webp"
-  },
-  {
-    name: "Youssef Alami",
+    name: "Hicham R.",
     role: "Entrepreneur",
-    location: "Marrakech",
-    content: "Une expérience client exceptionnelle du début à la fin. Le site web est rapide, beau et parfaitement optimisé.",
-    image: "/images/testimonial-5.webp"
+    location: "Casablanca",
+    content: "Un accompagnement sur-mesure et un site web qui inspire confiance à mes clients. Je recommande vivement !",
+    image: "/images/Hicham R.webp",
+    rating: 5
+  },
+  {
+    name: "Karine M.",
+    role: "Medecin généraliste",
+    location: "Paris",
+    content: "Grâce à leur expertise, notre agence a gagné en visibilité et en crédibilité. Un travail remarquable !",
+    image: "/images/Karine M.webp",
+    rating: 5
+  },
+  {
+    name: "Sophie T.",
+    role: "Responsable marketing",
+    location: "Lyon",
+    content: "L'équipe a su comprendre nos besoins et livrer un site moderne, rapide et efficace. Nos clients sont ravis !",
+    image: "/images/Sophie T.webp",
+    rating: 4
+  },
+  {
+    name: "Dr. Mohamad B.",
+    role: "Médecin généraliste",
+    location: "Rabat",
+    content: "Le site est intuitif et professionnel, il facilite la prise de rendez-vous pour mes patients.",
+    image: "/images/docteur.webp",
+    rating: 5
   }
 ];
 ---
@@ -57,7 +54,20 @@ const testimonials = [
                     height="64"
                   />
                   <div class="ml-4">
-                    <h3 class="font-bold text-lg">{testimonial.name}</h3>
+                    <h3 class="font-bold text-lg flex items-center gap-2">
+                      {testimonial.name}
+                      <span class="flex items-center">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <svg
+                            class={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.922-.755 1.688-1.54 1.118l-3.38-2.454a1 1 0 00-1.175 0l-3.38 2.454c-.784.57-1.838-.196-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.05 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z" />
+                          </svg>
+                        ))}
+                      </span>
+                    </h3>
                     <p class="text-gray-600">{testimonial.role}</p>
                     <p class="text-gray-500 text-sm">{testimonial.location}</p>
                   </div>
