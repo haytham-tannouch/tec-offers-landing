@@ -91,15 +91,11 @@ import '../styles/global.css';
 			<!-- Section Hero avec fond dégradé -->
 			<section class="relative flex items-center justify-center overflow-hidden">
 				<div class="text-center space-y-6">
-					<!-- Calendly link widget begin -->
-					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-					<div class="flex justify-center mt-10">
-					  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/theelectcoders/appel-de-decouverte?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="h-14 px-8 tracking-wide inline-flex items-center justify-center font-medium rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
-						Réserver mon appel découverte
-					  </a>
-					</div>
-					<!-- Calendly link widget end -->
+					<!-- static button start -->
+					<link href="https://meetings.brevo.com/assets/styles/popup.css" rel="stylesheet" />
+					<script src="https://meetings.brevo.com/assets/libs/popup.min.js" type="text/javascript"></script>
+					<a href="" onclick="BrevoBookingPage.initStaticButton({ url: 'https://meet.brevo.com/haytham-tannouch/borderless?l=appel-de-decouverte' });return false;" style="cursor: pointer; font-family: Inter; font-weight: 500; background-color: #1B1B1B; color: white; padding: 0.5rem 1rem; border: 0px; box-shadow: rgba(0, 0, 0, 0.15) 0px -2px 0px inset; border-radius: 16px; text-decoration: none; display: inline-block;">Réserver maintenant</a>
+					<!-- static button end -->
 					<div class="animate-fade-in animation-delay-800">
 						<a
 							href="/"
